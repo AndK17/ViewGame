@@ -10,7 +10,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 public class MyView extends View {
-    float x = 500, y = 2000;
+    float x = 520, y = 1000;
     float r = 300;
 
     public MyView(Context context, @Nullable AttributeSet attrs){

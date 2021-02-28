@@ -18,8 +18,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 MyView mv = (MyView) view;
-                mv.x = motionEvent.getX();
-                mv.y = motionEvent.getY();
+                if (motionEvent.getX()-30 <= mv.x && mv.x <= motionEvent.getX()+30 && mv.y <= motionEvent.getY()+30 && mv.y >= motionEvent.getY()-30){
+                    mv.r += 50;
+                }else {
+                    mv.x = motionEvent.getX();
+                    mv.y = motionEvent.getY();
+                    mv.r = 300;
+                }
                 return false;
             }
         });
